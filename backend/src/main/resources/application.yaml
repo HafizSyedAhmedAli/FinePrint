@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: fineprint-api
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/fineprint}
+    username: ${DB_USER:fineprint}
+    password: ${DB_PASSWORD:devpass}
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+  mvc:
+    problemdetails:
+      enabled: true
+
+server:
+  shutdown: graceful
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true

@@ -1,0 +1,3 @@
+bun run --cwd frontend typecheck
+bun run --cwd frontend test:run
+bun scripts/mvn.mjs test
