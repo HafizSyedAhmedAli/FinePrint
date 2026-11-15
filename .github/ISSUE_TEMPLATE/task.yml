@@ -1,0 +1,21 @@
+name: Task
+description: A unit of work for a phase
+labels: [type/feature]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should be true when this is done?
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Checklist
+      value: |
+        - [ ] Failing test written first
+        - [ ] Implementation
+        - [ ] Docs updated if needed
+    validations:
+      required: true
